@@ -5,11 +5,11 @@ from mail_in_word.mail import mail_in_word
 from mail_in_word.table import find_paragraf
 from queries.core import insert_data
 # логин и пароль
-username = 'uvpo.sakh.pso@mail.ru'
-password = 'e9vxZhxDq5seN1A3g1Nt'
+username = 'ваш логин'
+password = 'уникальный пароль'
 # откуда получаем файлы
-sender_emails = ['a.shmatkov@sakhalin.gov.ru']
-sender_email= ['a.reukov@sakhalin.gov.ru']
+sender_emails = ['список почт от куда вы получаете файлы']
+sender_email= ['список почт куда вы отправляете файлы']
 # сsender_emailsкачиваем файлы
 folderpath = mail_in_word(username, password, sender_emails)
 # получаmем готового файла
