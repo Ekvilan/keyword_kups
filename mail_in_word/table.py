@@ -24,6 +24,7 @@ def extract_text_from_table(table, collected_text):
 
 def extract_text_from_doc(doc_path):
     doc = Document(doc_path)
+    print(doc_path)
     collected_text = set()
     full_text = ""
     for table in doc.tables:
@@ -49,13 +50,13 @@ def split_text_into_kusp(text, word_find):
         elif current_key and any(word in part for word in word_find):
             # Если нашли ключевое слово в части, добавляем в словарь
             kusp_dict[current_key] = part
-    print(kusp_dict)
 
     return kusp_dict
 
-word_find = ['взрыв', 'бомба', 'террор', 'дискредитация', 'скончался', 'труп', 'наезд', 'сбил', 'сбит', 'горит', 'пожар',
-'возгорание', 'убил', 'убийство', 'смерть', 'смертельные', 'массовое', 'дтп с пострадавшим', 'насильственные действия сексуального характера', 'угроза убиства',
-'несовершеннолетний', 'малолетний']
+word_find = [' взрыв ', ' бомба ', ' террор ', ' дискредитация ', ' скончался ', ' труп ', ' наезд ', ' сбил ', ' сбит ',
+              ' горит ', ' пожар ',' возгорание ', ' убил ', ' убийство ', ' смерть ', ' смертельные ', ' массовое ', 
+              ' дтп с пострадавшим', ' насильственные действия сексуального характера ', ' угроза убиства ',
+' несовершеннолетний ', ' малолетний ']
 
 def find_paragraf(folderPath):
     parts = folderPath.split('\\')
